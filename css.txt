@@ -150,3 +150,34 @@ width
   <div style="color: white; background-color: black;">...</div>
 </body>
 
+#############LECTURE 2##############
+1. Specificity: ID>Class>Type. More definied = more Specificity
+2. Inheritance: Child div inherits parent div unless:
+<!-- index.html -->
+
+<div id="parent">
+  <div class="child"></div>
+</div>
+
+3. Rule order: If there is conflict not solved by specificty and inheriance then last defined style will be applied
+
+#############LECTURE 4#############
+Everything is rectangle/box in css
+* {
+  outline: 2px solid red;
+}
+
+Padding: Content aur border ka gap
+Border: Margin aur content ki sepration
+Margin: dusre box ke border ka gap
+
+box-sizing : content-box Basically box increase krta ha as you add on margin and border
+box-sizing : border-box box remains same and content size is adjusted with margin and border
+
+
+#############LECTURE 5#############
+Default style is display: block. 
+Block elements will appear on the page stacked atop each other, each new element starting on a new line.
+Inline elements appear in line with whatever elements they are placed beside
+Divs allow us to divide the page into different blocks and apply styling to those blocks
+Span is an inline-level element by default.
