@@ -56,7 +56,7 @@ Another thing you can do with the class attribute is to add multiple classes to 
 }
 
 .unread {
-  /* several unique declarations */
+  /* several unique declarations */                 
 }
 
 6. Chaining Selectors:
@@ -72,4 +72,81 @@ Another thing you can do with the class attribute is to add multiple classes to 
 This is will only style that has both subsection and header classes. Can be done with classes and id aswell.
 
 7. Descendant combinator:
+<!-- index.html -->
+
+<div class="ancestor">
+  <!-- A -->
+  <div class="contents">
+    <!-- B -->
+    <div class="contents"><!-- C --></div>
+  </div>
+</div>
+
+<div class="contents"><!-- D --></div>
+
+/* styles.css */
+
+.ancestor .contents {
+  /* some declarations */
+}
+
+so this will see if class ancestor has child class of ancestor if it does then apply style
+
+
+-- Properties -- 
+1. color and background-color
+p {
+  /* hex example: */
+  color: #1100ff;
+}
+
+p {
+  /* rgb example: */
+  color: rgb(100, 0, 127);
+}
+
+p {
+  /* hsl example: */
+  color: hsl(15, 82%, 56%);
+}
+
+2. Typography
+font-family
+font-size
+font-weight boldness of font
+text-align: center
+
+3. Images
+height
+width
+
+-- External CSS --
+<!-- index.html -->
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+ -- Internal CSS --
+ <head>
+  <style>
+    div {
+      color: white;
+      background-color: black;
+    }
+
+    p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  ...
+</body>
+
+-- Inline CSS --
+<body>
+  <div style="color: white; background-color: black;">...</div>
+</body>
 
