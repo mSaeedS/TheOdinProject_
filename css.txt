@@ -167,7 +167,9 @@ Everything is rectangle/box in css
   outline: 2px solid red;
 }
 
-Padding: Content aur border ka gap
+Padding: Content aur border ka gap. Top right left bottom
+1 defined = all same
+2 defined = top,bottom same and left,right same
 Border: Margin aur content ki sepration
 Margin: dusre box ke border ka gap
 
