@@ -1,0 +1,13 @@
+.length {
+    font-size: large; 
+ }
+ 
+ .pink.length {
+     font-size: medium;
+     color: pink;
+ }
+ 
+ .red.length {
+     font-size: small;
+     color: red;
+ }
