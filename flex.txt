@@ -1,0 +1,36 @@
+## LESSON 1 ##
+-- HTML --
+<div class="flex-container">
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+</div>
+
+-- CSS --
+.flex-container {
+  display: flex;
+}
+
+/* this selector selects all divs inside of .flex-container */
+.flex-container div {
+  background: peachpuff;
+  border: 4px solid brown;
+  height: 100px;
+   flex: 1; 
+}
+
+-A flex container contains display: flex
+-A flex item is an item inside of an flex container
+-Flex item can become flex container and has its own flex items. (Nesting)
+
+## LESSON 2 ##
+-flex is shorthand for flex-grow, flex-shrink and flex-basis.
+-flex: 1 equates to: flex-grow: 1, flex-shrink: 1, flex-basis: 0.
+-flex-grow grows the item i.e increases size
+-flex-shrink decreases item size if all the items are bigger than container.
+-flex-basis makes shrinking or growing from a baseline size. Default is 0
+-Using auto as a flex-basis tells the item to check for a width
+-flex: auto = 1 1 auto
+
+
+
