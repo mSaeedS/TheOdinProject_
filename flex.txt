@@ -32,6 +32,9 @@
 -Using auto as a flex-basis tells the item to check for a width
 -flex: auto = 1 1 auto
 
+-items cant be shrinked more than element minimum size
+-to change minimum size use min-width
+
 ## LESSON 3 ##
 -Axes : 
 .flex-container {
@@ -56,6 +59,39 @@
   flex: 1 1 auto;
 }
 
+## LESSON 4 ##
+When flex-direction is row:
+-justify content aligns item horizontally 
+align-items aligns items vertically
+
+vice versa when flex direction is column;
+-gap adds gap between items like margin.
+
+.container {
+  height: 140px;
+  padding: 16px;
+  background: plum;
+  border: 4px solid indigo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.item {
+  width: 60px;
+  height: 60px;
+  border: 4px solid darkslategray;
+  background: skyblue;
+}
+
+-if a specific items needs to be aligned we use align-self
+
+-flex-wrap: wrap allows to wrap item into new column/row instead of shrinking
+-flex-wrap: wrap gives us two rows of stuff.
+-Within each row, align-items lets us slide each individual child up or down
+-The cross axis will now intersect two rows, not one. And so, we can't move the rows individually, we need to distribute them as a group.
+- the cross axis! And so the property we want is align-content.
 
 
 
