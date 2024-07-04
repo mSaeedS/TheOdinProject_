@@ -31,3 +31,40 @@ concatenation operator.
 - == return true to '10'==10 but === does not as === is strict.
 - tofixed() to  round up decimals
 - Number() to convert string into numbers.
+
+## LESSON 2 ##
+STRINGS:
+-Declared using ' '," ", ` `.
+- ` ` are used for embedding javascript or declare template literals over mutiple lines
+const name = "Chris";
+const greeting = `Hello, ${name}`;
+console.log(greeting); // "Hello, Chris"
+
+const one = "Hello, ";
+const two = "how are you?";
+const joined = `${one}${two}`;
+console.log(joined); // "Hello, how are you?"
+
+Newline string:
+const newline = `One day you finally knew
+what you had to do, and began,`;
+console.log(newline);
+
+/*
+One day you finally knew
+what you had to do, and began,
+*/
+
+-or just use \n lol.
+
+-To include '' or "" or any other to make part  of your string use \
+-String() function converts its argument to a string.
+
+MDN String reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+https://www.w3schools.com/js/js_string_methods.asp
+https://www.w3schools.com/jsref/jsref_obj_string.asp
+
+CONDITIONALS:
+-Exact same as C/C++.
+
+
