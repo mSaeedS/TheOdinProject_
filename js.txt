@@ -67,4 +67,6 @@ https://www.w3schools.com/jsref/jsref_obj_string.asp
 CONDITIONALS:
 -Exact same as C/C++.
 
+## LESSON 3 ##
+SKIPPED for now
 
