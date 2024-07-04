@@ -1,0 +1,33 @@
+## LESSON 1 ##
+-console.log() is the command to print something on console.
+-Linking exteral script:
+  <script src="javascript.js"></script>
+
+Variables declaration:
+1) var x = 5; are function or global scope bt not block scope
+var are are declared as function begins but assigned where they're written
+2) let name = "Saeed";
+3) const color="255,255,255";
+
+-Operators same as python.
+-we can use 2e3 for = 2000 for =bigger numbers
+-number + string = concatenation
+-string + number = concatenation
+
+let x = 10;
+let y = 20;
+let z = "30";
+let result = x + y + z;
+
+The JavaScript interpreter works from left to right.
+First 10 + 20 is added because x and y are both numbers.
+Then 30 + "30" is concatenated because z is a string.
+
+-When using "10"/"2" or "10"/2 JS will convert strings into numbers
+and perform maths arithmatic. But it wont work with + because its
+concatenation operator.
+-JS has Infinity and -Infinity. xdd
+- typeof and toString
+- == return true to '10'==10 but === does not as === is strict.
+- tofixed() to  round up decimals
+- Number() to convert string into numbers.
