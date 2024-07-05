@@ -70,3 +70,44 @@ CONDITIONALS:
 ## LESSON 3 ##
 SKIPPED for now
 
+## LESSON 4 ##
+FUNCTIONS:
+
+function myFunction() {
+  alert("hello");
+}
+
+myFunction();
+// calls the function once
+
+-Default parameters main parameter ko value de dete hain.
+
+Anonymous function: function with no name
+
+(function () {
+  alert("hello");
+});
+
+textBox.addEventListener("keydown", function (event) {
+  console.log(`You pressed "${event.key}".`);
+});
+
+Arrow functions:
+textBox.addEventListener("keydown", (event) => {
+  console.log(`You pressed "${event.key}".`);
+});
+
+() can have multiple parameters.
+
+//
+const originals = [1, 2, 3];
+const doubled = originals.map(item => item * 2);
+console.log(doubled); // [2, 4, 6]
+
+is === to
+
+function doubleItem(item) {
+  return item * 2;
+}
+//
+
