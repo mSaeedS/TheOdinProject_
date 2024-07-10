@@ -175,3 +175,35 @@ const myObj = {
     {name:"Fiat", models:["500", "Panda"]}
   ]
 }
+
+-- Loops --
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+for (const cat in cats) {
+  console.log(cat);
+}
+
+-in cats returns the indexes
+-of cats returns the values.
+-map(func()) is a functions that can call function for each element in array
+-filter(func()) only makes new array with element that is returned true by func()
+-for loop can work like c/c++ one too.
+-exit loop with break;
+-skip iteration using continue;
+-while loop is same as python/c++.
+-do while same as c/c++.
+-using labels to break/continue out of specific loop:
+outer: for (let i = 0; i < 3; i++) {
+
+  for (let j = 0; j < 3; j++) {
+
+    let input = prompt(`Value at coords (${i},${j})`, '');
+
+    // if an empty string or canceled, then break out of both loops
+    if (!input) break outer; // (*)
+
+    // do something with the value...
+  }
+}
+
+alert('Done!');
