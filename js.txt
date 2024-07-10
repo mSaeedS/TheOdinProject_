@@ -111,3 +111,67 @@ function doubleItem(item) {
 }
 //
 
+## LESSON 10 ##
+--Arrays--
+
+const cars = [
+  "Saab",
+  "Volvo",
+  "BMW"
+];
+
+or
+
+const cars = new Array("Saab", "Volvo", "BMW");
+
+-Accessing values of array index:
+
+let car = cars[0];
+cars[0] = "Opel";
+
+- converts array into string:
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+Result:
+
+Banana,Orange,Apple,Mango
+
+-Dictionaries:
+const person = {firstName:"John", lastName:"Doe", age:46};
+document.getElementById("demo").innerHTML = person.firstName;
+
+-Arrays can store multiple datatypes including functions and arrays.
+
+-Methods:
+cars.length   // Returns the number of elements
+cars.sort()   // Sorts the array
+Array.forEach() // to loop through each element in array
+array.push() // to add new element in the end of array
+array.pop() // removes last element 
+array.shift() // removes first element
+array.unshift() // adds element to first index and unshifts
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+The first parameter (2) defines the position where new elements should be added (spliced in).
+
+The second parameter (0) defines how many elements should be removed.
+
+The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+The splice() method returns an array with the deleted items:
+Slice can be used to create new array from current array.
+-In JavaScript, arrays use numbered indexes.  
+-In JavaScript, objects use named indexes.
+
+
+-Nested Arrays and objects:
+const myObj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+  ]
+}
