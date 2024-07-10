@@ -1,7 +1,7 @@
 ## LESSON 1 ##
 -console.log() is the command to print something on console.
 -Linking exteral script:
-  <script src="javascript.js"></script>
+  <script src="javascript.js" defer></script>
 
 Variables declaration:
 1) var x = 5; are function or global scope bt not block scope
@@ -207,3 +207,110 @@ outer: for (let i = 0; i < 3; i++) {
 }
 
 alert('Done!');
+
+## LESSON 11 ##
+
+-element.querySelector(selector) - returns a reference to the first match of selector.
+-element.querySelectorAll(selectors) - returns a “NodeList” containing references to all of the matches of the selectors.
+-document.createElement(tagName, [options]) - creates a new element of tag type tagName. [options] in this case means you can add some optional parameters to the function.
+-created elements are not placed in dom but memory for testing.
+-To add element into DOM:
+Append elements
+parentNode.appendChild(childNode) - appends childNode as the last child of parentNode.
+parentNode.insertBefore(newNode, referenceNode) - inserts newNode into parentNode before referenceNode.
+Remove elements
+parentNode.removeChild(child) - removes child from parentNode on the DOM and returns a reference to child.
+
+-Altering Elements:
+// creates a new div referenced in the variable 'div'
+const div = document.createElement("div");
+// adds the indicated style rule to the element in the div variable
+div.style.color = "blue";
+
+// adds several style rules
+div.style.cssText = "color: blue; background: white;";
+
+// adds several style rules
+div.setAttribute("style", "color: blue; background: white;");
+
+-What works and not works with kebab-cases:
+// dot notation with kebab case: doesn't work as it attempts to subtract color from div.style.background
+// equivalent to: div.style.background - color
+div.style.background-color;
+
+// dot notation with camelCase: works, accesses the div's background-color style
+div.style.backgroundColor;
+
+// bracket notation with kebab-case: also works
+div.style["background-color"];
+
+// bracket notation with camelCase: also works
+div.style["backgroundColor"];
+
+-Editing Attributes:
+// if id exists, update it to 'theDiv', else create an id with value "theDiv"
+div.setAttribute("id", "theDiv");
+
+// returns value of specified attribute, in this case "theDiv"
+div.getAttribute("id");
+
+// removes specified attribute
+div.removeAttribute("id");
+
+-working with classes:
+// adds class "new" to your new div
+div.classList.add("new");
+
+// removes "new" class from div
+div.classList.remove("new");
+
+// if div doesn't have class "active" then add it, or if it does, then remove it
+div.classList.toggle("active");
+
+-// creates a text node containing "Hello World!" and inserts it in div
+div.textContent = "Hello World!";
+
+-// renders the HTML inside div
+div.innerHTML = "<span>Hello World!</span>";
+
+-Events:
+<!-- the HTML file -->
+<!-- METHODS 2 & 3 -->
+<button id="btn">CLICK ME BABY</button>
+
+// the JavaScript file
+// METHODS 2 & 3
+function alertFunction() {
+  alert("YAY! YOU DID IT!");
+}
+const btn = document.querySelector("#btn");
+
+// METHOD 2
+btn.onclick = alertFunction;
+
+// METHOD 3
+btn.addEventListener("click", alertFunction);
+
+-Best way:
+btn.addEventListener("click", function (e) {
+  e.target.style.background = "blue";
+});
+// e is an object 
+
+-ADding event to multiple elements:
+<div id="container">
+  <button id="1">Click Me</button>
+  <button id="2">Click Me</button>
+  <button id="3">Click Me</button>
+</div>
+
+// buttons is a node list. It looks and acts much like an array.
+const buttons = document.querySelectorAll("button");
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener("click", () => {
+    alert(button.id);
+  });
+});
