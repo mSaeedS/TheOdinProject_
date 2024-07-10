@@ -379,3 +379,13 @@ for (let key in user) {
 }
 
 -keys are listed in creation order if not integers.
+
+=reduce=
+const arr = [1, 2, 3, 4, 5];
+const productOfAllNums = arr.reduce((total, currentItem) => {
+  return total * currentItem;
+}, 1);
+console.log(productOfAllNums); // Outputs 120;
+console.log(arr); // Outputs [1, 2, 3, 4, 5]
+
+So what .reduce() will do, is it will once again go through every element in arr and apply the callback function to it. It then changes total, without actually changing the array itself. After it’s done, it returns total.
